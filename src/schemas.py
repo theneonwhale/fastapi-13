@@ -28,6 +28,10 @@ class TokenModel(BaseModel):
     token_type: str = "bearer"
 
 
+class RequestEmail(BaseModel):
+    email: EmailStr
+
+
 class ContactModel(BaseModel):
     name: str = Field(min_length=3, max_length=50)
     surname: str = Field(min_length=3, max_length=50)

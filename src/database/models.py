@@ -1,5 +1,5 @@
 import enum
-from sqlalchemy import Column, Integer, String, DateTime, func, Date, Enum
+from sqlalchemy import Column, Integer, String, DateTime, func, Date, Enum, Boolean
 from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy.sql.schema import ForeignKey
 
@@ -22,6 +22,7 @@ class User(Base):
     refresh_token = Column(String(255), nullable=True)
     avatar = Column(String(255), nullable=True)
     roles = Column('roles', Enum(Role), default=Role.user)
+    confirmed = Column(Boolean, default=False)
 
 
 class Contact(Base):
