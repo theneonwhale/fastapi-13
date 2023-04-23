@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fastapi-jwt-12"
+name = "fastapi-13"
 version = "0.1.0"
 description = ""
 authors = ["Andrii Kylymnyk <a.kylymnyk@gmail.com>"]
