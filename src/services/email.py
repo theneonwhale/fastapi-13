@@ -6,12 +6,14 @@ from pydantic import EmailStr
 
 from src.services.auth import auth_service
 
+from src.conf.config import settings
+
 conf = ConnectionConfig(
-    MAIL_USERNAME="tnw_test@meta.ua",
-    MAIL_PASSWORD="Passportmeta3435",
-    MAIL_FROM=EmailStr("tnw_test@meta.ua"),
-    MAIL_PORT=465,
-    MAIL_SERVER="smtp.meta.ua",
+    MAIL_USERNAME=settings.mail_username,
+    MAIL_PASSWORD=settings.mail_password,
+    MAIL_FROM=EmailStr(settings.mail_from),
+    MAIL_PORT=settings.mail_port,
+    MAIL_SERVER=settings.mail_server,
     MAIL_FROM_NAME="Contacts App",
     MAIL_STARTTLS=False,
     MAIL_SSL_TLS=True,
